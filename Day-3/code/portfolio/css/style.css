@@ -1,0 +1,139 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+/* header  */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(to right, #007bff, #00d4ff);
+  color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+/* combinators */
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a  {
+    text-decoration:  none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.5s;
+}
+
+.nav-links a:hover {
+    color: yellow;
+}
+
+/* hero  */
+.hero {
+    background: linear-gradient(to right, #007bff, #00d4ff);
+    color: white;
+    padding: 5px;
+}
+
+
+.hero img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.about {
+    padding: 40px;
+    background-color: white;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.skills  {
+    padding: 40px;
+}
+
+
+.skills-list span {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+
+.projects {
+    background-color: #e9ecef;
+    height: 150px;
+    padding: 40px;
+}
+
+
+
+.project-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.project-card {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: width 0.5s, height 0.5s;
+    border-radius: 10px;
+}
+
+.project-card:hover {
+    height: 80px;
+    width: 80px;
+}
+
+
+.contact {
+    padding: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        padding: 10px 0px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+    .project-card {
+        width: 100%;
+    }
+
+    .projects {
+        height: 250px;
+    }
+}

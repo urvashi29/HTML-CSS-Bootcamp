@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* pseudo class (:) */
+.btn:hover {
+  background-color: yellow;
+}
+
+input:focus {
+  background-color: pink;
+}
+
+p:first-child {
+  font-weight: bolder;
+}
+
+/* pseudo elements (::)  */
+p::first-letter {
+  font-size: 50px;
+}
+
+h1::before {
+  content: "hello!";
+}
+
+h1::after {
+  content: "world!";
+}
+
+/* gardient  */
+
+.gradient-box {
+  width: 300px;
+  height: 200px;
+  border: 2px solid black;
+  background: linear-gradient(to left, blue, yellow, green, purple);
+}
+
+.radial-box {
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  background: radial-gradient(circle, red, yellow, green, purple);
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  transition: width 3s, background 2s;
+}
+
+.box:hover {
+  width: 200px;
+  height: 200px;
+  background: olive;
+}
+
+.card {
+  width: 200px;
+  padding: 20px;
+  background: linear-gradient(to right, purple, orange, yellow, green);
+  transition: width 2s;
+}
+
+.card:hover {
+  width: 300px;
+}
+
+.media {
+  background-color: yellow;
+  font-size: 20px;
+  width: 20%;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+div {
+    border: 2px solid black;
+    width: 23%;
+    padding: 10px;
+    height: 200px;
+}
+
+
+@media screen and (max-width: 800px) {
+    div {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    div {
+        width: 100%;
+    }   
+}
+
+
+/* 0 till 400px  */
+@media screen and (max-width: 400px) {
+  .media {
+    background-color: orange;
+  }
+}
+
+/* 600px and above  */
+@media screen and (min-width: 600px) {
+  .media {
+    background-color: pink;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .media {
+    background-color: olive;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .media {
+    font-size: 30px;
+  }
+}
+
+/* 1200px & above  */
+@media screen and (min-width: 1200px) {
+  .media {
+    display: none;
+  }
+}
